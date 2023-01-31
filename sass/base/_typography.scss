@@ -1,0 +1,87 @@
+
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    // font-size: 16px;    
+    line-height: 1.7;
+    color: $color-gray-dark;
+}
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 3rem;
+        }
+
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-name: moveInLeft;
+    }
+    &--sub{
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        
+        @include respond(phone){
+            letter-spacing: .5rem;
+            font-size: 1rem;
+        }
+        animation: monvInRight 1s ease-out;
+        -webkit-animation: monvInRight 1s ease-out;
+    }
+}
+.heading-secondary{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-primary-light color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgb(6, 6, 89);
+    letter-spacing: .2rem;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.4);
+        -webkit-transform: skewY(2deg) skewX(15deg) scale(1.4);
+        -moz-transform: skewY(2deg) skewX(15deg) scale(1.4);
+        -ms-transform: skewY(2deg) skewX(15deg) scale(1.4);
+        -o-transform: skewY(2deg) skewX(15deg) scale(1.4);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, 2.2);
+    }
+}
+
+.heading-tertiary{
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: 14px;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+}
